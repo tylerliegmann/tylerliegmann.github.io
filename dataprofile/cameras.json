@@ -1,0 +1,269 @@
+{
+  "cameras": [
+    {
+      "name": "1.jpg",
+      "latitiude": "41 53 12.018 N",
+      "longitude": "87 37 28.35 W"
+    }
+    {
+      "name": "2.jpg",
+      "latitiude": "41 53 8.88 N",
+      "longitude": "87 37 29.838 W"
+    }
+    {
+      "name": "3.jpg",
+      "latitiude": "41 53 8.52 N",
+      "longitude": "87 37 27.942 W"
+    }
+    {
+      "name": "4.jpg",
+      "latitiude": "41 53 8.01 N",
+      "longitude": "87 37 32.502 W"
+    }
+    {
+      "name": "5.jpg",
+      "latitiude": "42 53 8.712 N",
+      "longitude": "87 37 36.48 W"
+    }
+    {
+      "name": "6.jpg",
+      "latitiude": "41 53 8.478 N",
+      "longitude": "87 37 43.158 W"
+    }
+    {
+      "name": "7.jpg",
+      "latitiude": "41 52 46.488 N",
+      "longitude": "87 37 28.872 W"
+    }
+    {
+      "name": "8.jpg",
+      "latitiude": "41 53 7.572 N",
+      "longitude": "87 37 53.568 W"
+    }
+    {
+      "name": "9.jpg",
+      "latitiude": "41 53 4.17 N",
+      "longitude": "87 37 52.662 W"
+    }
+    {
+      "name": "10.jpg",
+      "latitiude": "41 52 52.038 N",
+      "longitude": "87 37 34.89 W"
+    }
+    {
+      "name": "11.jpg",
+      "latitiude": "41 52 32.088 N",
+      "longitude": "87 41 14.892 W"
+    }
+    {
+      "name": "12.jpg",
+      "latitiude": "41 52 29.7 N",
+      "longitude": "87 41 10.962 W"
+    }
+    {
+      "name": "13.jpg",
+      "latitiude": "41 52 50.052 N",
+      "longitude": "87 37 40.68 W"
+    }
+    {
+      "name": "14.jpg",
+      "latitiude": "41 52 55.47 N",
+      "longitude": " 87 37 29.808 W"
+    }
+    {
+      "name": "15.jpg",
+      "latitiude": "41 52 49.608 N",
+      "longitude": "87 39 21.462 W"
+    }
+    {
+      "name": "16.jpg",
+      "latitiude": "41 52 49.86 N",
+      "longitude": "87 39 21.21 W"
+    }
+    {
+      "name": "17.jpg",
+      "latitiude": "41 52 49.788",
+      "longitude": "87 39 21.288"
+    }
+    {
+      "name": "18.jpg",
+      "latitiude": "41 52 49.512 N",
+      "longitude": "87 39 0.228 W"
+    }
+    {
+      "name": "19.jpg",
+      "latitiude": "41 52 49.65 N",
+      "longitude": "87 38 51.018"
+    }
+    {
+      "name": "20.jpg",
+      "latitiude": "41 53 7.602 N",
+      "longitude": "87 37 51.81 W"
+    }
+    {
+      "name": "21.jpg",
+      "latitiude": "41 52 49.398 N",
+      "longitude": "87 38 42.072 W"
+    }
+    {
+      "name": "22.jpg",
+      "latitiude": "41 52  52.362 N",
+      "longitude": "87 38 33.78 W"
+    }
+    {
+      "name": "23.jpg",
+      "latitiude": "41 52 48.33 N",
+      "longitude": "87 38 23.148 W"
+    }
+    {
+      "name": "24.jpg",
+      "latitiude": "41 52 48.828 N",
+      "longitude": "87 38 17.76 W"
+    }
+    {
+      "name": "25.jpg",
+      "latitiude": "41 52 50.19 N",
+      "longitude": "87 38 14.58 W"
+    }
+    {
+      "name": "26.jpg",
+      "latitiude": "41 52 46.962 N",
+      "longitude": "87 38 8.01 W"
+    }
+    {
+      "name": "27.jpg",
+      "latitiude": "41 52 52.302 N",
+      "longitude": "87 28 1.452 W"
+    }
+    {
+      "name": "28.jpg",
+      "latitiude": "41 52 50.37 N",
+      "longitude": "87 37 55.632 W"
+    }
+    {
+      "name": "29.jpg",
+      "latitiude": "41 52 51.888 N",
+      "longitude": "87 37 46.698 W"
+    }
+    {
+      "name": "30.jpg",
+      "latitiude": "41 52 50.82 N",
+      "longitude": "87 37 43.428 W"
+    }
+    {
+      "name": "31.jpg",
+      "latitiude": "41 52 50.79 N",
+      "longitude": "87 37 30.162 W"
+    }
+    {
+      "name": "32.jpg",
+      "latitiude": "41 52 46.908 N",
+      "longitude": "87 37 28.458 W"
+    }
+    {
+      "name": "33.jpg",
+      "latitiude": "41 52 43.458 N",
+      "longitude": "87 37 28.272 W"
+    }
+    {
+      "name": "34.jpg",
+      "latitiude": "41 52 35.91 N",
+      "longitude": "87 37 34.752 W"
+    }
+    {
+      "name": "35.jpg",
+      "latitiude": "41 52 38.97 N",
+      "longitude": "87 37 45.438 W"
+    }
+    {
+      "name": "36.jpg",
+      "latitiude": "41 52 39.408 N",
+      "longitude": "87 37 45.66 W"
+    }
+    {
+      "name": "37.jpg",
+      "latitiude": "41 52 27.54 N",
+      "longitude": "87 41 20.772 W"
+    }
+    {
+      "name": "38.jpg",
+      "latitiude": "41 52 29.382 N",
+      "longitude": "87 41 10.47 W"
+    }
+    {
+      "name": "39.jpg",
+      "latitiude": "41 53 5.028 N",
+      "longitude": "87 37 28.05 W"
+    }
+    {
+      "name": "40.jpg",
+      "latitiude": "41 52 50.928 N",
+      "longitude": "87 37 33.63 W"
+    }
+    {
+      "name": "41.jpg",
+      "latitiude": "41 52 46.74 N",
+      "longitude": "87 37 32.988 W"
+    }
+    {
+      "name": "42.jpg",
+      "latitiude": "41 52 52.398 N",
+      "longitude": "87 37 34.56 W"
+    }
+    {
+      "name": "43.jpg",
+      "latitiude": "41 52 28.518 N",
+      "longitude": "87 41  11.04 W"
+    }
+    {
+      "name": "44.jpg",
+      "latitiude": "41 52 32.022 N",
+      "longitude": "87  41 12.39 W"
+    }
+    {
+      "name": "45.jpg",
+      "latitiude": "41 53 5.01 N",
+      "longitude": "87 37 28.05 W"
+    }
+    {
+      "name": "46.jpg",
+      "latitiude": "41 51 8.85 N",
+      "longitude": "87 39 39.03 W"
+    }
+    {
+      "name": "47.jpg",
+      "latitiude": "41 51 9.168 N",
+      "longitude": "87 40 6.36 W"
+    }
+    {
+      "name": "48.jpg",
+      "latitiude": "41 54 34.38 N",
+      "longitude": "87 40 38.772 W"
+    }
+    {
+      "name": "49.jpg",
+      "latitiude": "41 52 50.85 N",
+      "longitude": "87  37 40.818 W"
+    }
+    {
+      "name": "50.jpg",
+      "latitiude": "41 52 50.76 N",
+      "longitude": "87 37 30 W"
+    }
+    {
+      "name": "51.jpg",
+      "latitiude": "41 52 39.48 N",
+      "longitude": "87 37 45.678 W"
+    }
+    {
+      "name": "52.jpg",
+      "latitiude": "41 53 11.202 N",
+      "longitude": "87 37 28.08 W"
+    }
+
+
+
+  ]
+
+
+}

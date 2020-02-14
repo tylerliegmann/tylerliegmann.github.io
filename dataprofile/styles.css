@@ -1,0 +1,30 @@
+
+
+.button1 {
+  background-color: rgb(40, 100, 100);
+  padding: 20px;
+  font-size: 30 px;
+  color: blue;
+  border: none;
+  opacity: 0.5;
+  margin-right: 30px;
+}
+
+.button1:hover{
+  opacity: 0.5;
+}
+
+
+.button2 {
+  background-color: rgb(40, 200, 100);
+}
+
+.rSlider{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 200px;
+  height: 25px;
+  background-color: rgb(190,0,0);
+  opacity: 0.8;
+  transform:rotate(270deg);
+}
