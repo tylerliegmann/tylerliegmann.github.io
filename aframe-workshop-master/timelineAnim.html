@@ -1,0 +1,195 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- main a-frame library -->
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+
+    <!-- physics library -->
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+    <!-- particle system library -->
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+    <!-- environment library -->
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+    <!-- text geometry library -->
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+
+    <!-- extras library -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+
+    <!-- animation -->
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.1/dist/aframe-animation-timeline-component.min.js"></script>
+
+    <!-- timeline -->
+      <script src="https://unpkg.com/aframe-animation-timeline-component@1.6.0/dist/aframe-animation-timeline-component.min.js"></script>
+
+<!-- event set component -->
+      <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
+  </head>
+  <body>
+
+  <!-- All A-Frame code goes here -->
+    <a-scene physics animation-timeline__1 = "timeline: #timeline; loop: true; easing: linear;">
+      <a-assets>
+        <img id="skyTexture" src="images/starmap.jpg">
+        <img id="io" src="images/io.jpg">
+        <img id="pluto" src="images/pluto.jpg">
+        <video id="city" autoplay loop="true" src="video/city.mp4"></video>
+        <video id="mountain" autoplay loop="true" src="video/mountain.mp4"></video>
+        <a-asset-item id="niceFeet-obj" src="models/niceFeet.obj"></a-asset-item>
+        <a-asset-item id="niceFeet-mtl" src="models/niceFeet.mtl"></a-asset-item>
+        <a-asset-item id="nonFeet-obj" src="models/nonFeet.obj"></a-asset-item>
+        <a-asset-item id="nonFeet-mtl" src="models/nonFeet.mtl"></a-asset-item>
+        <a-asset-item id="tower-gltf" src="models/model.gltf"></a-asset-item>
+
+        <a-timeline id="timeline">
+
+          <a-timeline-animation select="#ioMoon" name ="key1"></a-timeline-animation>
+          <a-timeline-animation select="#ioMoon" name ="key2"></a-timeline-animation>
+          <a-timeline-animation select="#ioMoon" name ="key3"></a-timeline-animation>
+
+        </a-timeline>
+
+      </a-assets>
+
+      <a-entity id="cameraRig" movement-controls
+      position = "0 0 3">
+
+        <a-entity camera look-controls position="0 2 0">
+        <a-cursor color="red">
+        </a-cursor>
+      </a-entity>
+
+      </a-entity>
+
+
+      <a-entity id="mainImg"
+        geometry="primitive: plane; width: 5; height: 5;"
+        material="src: #skyTexture;"
+        position="4 1.25 -2"></a-entity>
+
+      <a-entity id="sel1" class="plane"
+        geometry="primitive: plane; width: 1; height: 1;"
+        material="src: #pluto;"
+        event-set__1="_event: mouseenter; _target: #mainImg; material.src: #pluto"
+        event-set__2="_event: mouseleave; _target: #mainImg; material.src: #skyTexture"
+        position="0 3 -2"></a-entity>
+
+      <a-entity id="sel2" class="plane"
+        geometry="primitive: plane; width: 1; height: 1"
+        material="src: #io;"
+        event-set__1="_event: mouseenter; _target: #mainImg; material.src: #io"
+        event-set__2="_event: mouseleave; _target: #mainImg; material.src: #skyTexture"
+        position="0 1 -2"></a-entity>
+
+      <!-- <a-entity
+  position="0 2.25 -15"
+  particle-system="preset: snow; size:5">
+</a-entity> -->
+
+
+      <!-- <a-entity
+      geometry="primitive: sphere" radius="1;" position="-3.87552 0.64958 -4.0563"
+      radius = "1;"
+      position="0 1.5 -4;"
+      material="src: #io"
+      animation="property: rotation;
+           to: 0 360 0;
+           dur: 15000;
+           easing: linear;
+           loop: true;">
+      </a-entity> -->
+
+
+    <a-entity
+    id="ioMoon"
+            geometry="primitive: sphere"
+            radius="1;"
+            position="-1.5 2 -4;"
+            material="src: #io;"
+            animation__key1 = "property: position; from: -1.5 2 -4; to: 1 2 -4"
+            animation__key2 = "property: position; from: 1 2 -4; to : 0 3 -4"
+            animation__key3 = "property: position; from: 0 3 -4; to: -1.5 2 -4"
+
+
+
+            >
+            </a-entity>
+
+      <a-entity
+      static-body
+      geometry="primitive: plane"
+      scale="10 10 10;"
+      rotation="-90 0 0;"
+      position="0 -2 -2;"
+      material="color: blue">
+      </a-entity>
+
+<!-- parent of pluto sphere -->
+<a-entity
+position = "0 0 0"
+animation = "property: rotation;
+            to: 0 360 0;
+            dur: 5000;
+            easing: linear;
+            loop: true;">
+
+      <a-entity
+      geometry="primitive: sphere"
+      radius = "1;"
+      position="0 1.5 -4;"
+      material="src: #pluto"
+      animation="property: rotation;
+           to: 0 360 0;
+           dur: 15000;
+           easing: linear;
+           loop: true;">
+
+
+      </a-entity>
+</a-entity>
+
+
+
+
+      <a-text
+      value="Hello!"
+      color="#111"
+      position="0 2.5 -2"
+      align="center">
+      </a-text>
+
+      <a-text
+      value="You've come a long way!"
+      color="#111"
+      position="0 2.5 -70"
+      align="center">
+      </a-text>
+
+      <a-entity
+      obj-model="obj: #niceFeet-obj; mtl: #niceFeet-mtl"
+      position="0 0 0"
+      rotation="0 0 0"
+      scale="1 1 1">
+    </a-entity>
+
+    <a-entity
+    obj-model="obj: #nonFeet-obj; mtl: #nonFeet-mtl"
+    position="1 0 1"
+    rotation="0 0 0"
+    scale="1 1 1">
+  </a-entity>
+
+      <a-video src="#mountain" width="32" height="18" position="0 0 -10"></a-video>
+
+<!-- <a-entity environment="preset: tron"></a-entity> -->
+
+
+    <!-- <a-videosphere src="#city"></a-videosphere> -->
+    </a-scene>
+  </body>
+</html>

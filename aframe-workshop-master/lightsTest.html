@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- main a-frame library -->
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+
+    <!-- physics library -->
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+    <!-- particle system library -->
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+    <!-- environment library -->
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+    <!-- text geometry library -->
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+
+    <!-- extras library -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+
+    <!-- animation -->
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.1/dist/aframe-animation-timeline-component.min.js"></script>
+
+    <!-- timeline -->
+      <script src="https://unpkg.com/aframe-animation-timeline-component@1.6.0/dist/aframe-animation-timeline-component.min.js"></script>
+
+<!-- event set component -->
+      <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
+  </head>
+  <body>
+
+  <!-- All A-Frame code goes here -->
+    <a-scene light="defaultLightsEnabled: false">
+      <a-assets>
+        <img id="skyTexture" src="images/starmap.jpg">
+        <img id="window" src="images/blinds.jpg">
+        <img id="windowTwo" src="images/blindsTwo.jpg">
+        <img id="desert" src="images/desert.jpg">
+        <img id="io" src="images/io.jpg">
+        <img id="pluto" src="images/pluto.jpg">
+        <video id="city" autoplay loop="true" src="video/city.mp4"></video>
+        <video id="mountain" autoplay loop="true" src="video/mountain.mp4"></video>
+        <a-asset-item id="niceFeet-obj" src="models/niceFeet.obj"></a-asset-item>
+        <a-asset-item id="niceFeet-mtl" src="models/niceFeet.mtl"></a-asset-item>
+        <a-asset-item id="nonFeet-obj" src="models/nonFeet.obj"></a-asset-item>
+        <a-asset-item id="nonFeet-mtl" src="models/nonFeet.mtl"></a-asset-item>
+        <a-asset-item id="tower-gltf" src="models/model.gltf"></a-asset-item>
+        <a-asset-item id="desert-obj" src="models/nonFeet.obj"></a-asset-item>
+        <a-asset-item id="desert-mtl" src="models/nonFeet.mtl"></a-asset-item>
+
+        <!-- <a-timeline id="timeline">
+
+          <a-timeline-animation select="#ioMoon" name ="key1"></a-timeline-animation>
+          <a-timeline-animation select="#ioMoon" name ="key2"></a-timeline-animation>
+          <a-timeline-animation select="#ioMoon" name ="key3"></a-timeline-animation>
+
+        </a-timeline> -->
+
+      </a-assets>
+
+      <a-entity id="cameraRig" movement-controls
+      position = "0 0 3">
+
+        <a-entity camera look-controls position="0 2 0">
+          <a-entity light="type: spot; angle: 20; decay: 1.0; penumbra: 1.0"></a-entity>
+
+        <a-cursor geometry = "radiusInner: 10; radiusOuter: 10"
+                  raycaster="objects: .plane">
+        </a-cursor>
+      </a-entity>
+      </a-entity>
+
+      <a-entity
+      static-body
+      geometry="primitive: plane"
+      scale="10 10 10;"
+      rotation="-90 0 0;"
+      position="0 -5 -5;"
+      material="src: #desert">
+      </a-entity>
+
+
+
+<!-- <a-entity environment="preset: tron"></a-entity> -->
+<a-sky color ="#111">
+  </a-sky>
+
+  </a-scene>
+</body>
+</html>

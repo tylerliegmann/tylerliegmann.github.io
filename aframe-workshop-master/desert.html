@@ -1,0 +1,315 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- main a-frame library -->
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+
+    <!-- physics library -->
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+    <!-- particle system library -->
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+    <!-- environment library -->
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+    <!-- text geometry library -->
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+
+    <!-- extras library -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+
+    <!-- animation -->
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.1/dist/aframe-animation-timeline-component.min.js"></script>
+
+    <!-- timeline -->
+      <script src="https://unpkg.com/aframe-animation-timeline-component@1.6.0/dist/aframe-animation-timeline-component.min.js"></script>
+
+<!-- event set component -->
+      <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
+<!-- log script -->
+      <script src="https://unpkg.com/aframe-log-component/dist/aframe-log-component.min.js"></script>
+
+<!-- room script -->
+      <script src="https://unpkg.com/aframe-room-component/dist/aframe-room-component.min.js"></script>
+
+  </head>
+  <body>
+
+  <!-- All A-Frame code goes here -->
+    <a-scene physics animation-timeline__1 = "timeline: #timeline; loop: true; easing: linear;"
+    light="defaultLightsEnabled: false">
+      <a-assets>
+        <img id="skyTexture" src="images/starmap.jpg">
+        <img id="nightSky" src="images/nightSky.jpg">
+        <img id="window" src="images/blinds.jpg">
+        <img id="windowTwo" src="images/blindsTwo.jpg">
+        <img id="openWindowOne" src="images/openWindowOne.jpg">
+        <img id="openWindowTwo" src="images/openWindowTwo.jpg">
+        <img id="openWindowThree" src="images/openWindowThree.jpg">
+        <img id="static" src="images/static.jpg">
+        <img id="io" src="images/io.jpg">
+        <img id="pluto" src="images/pluto.jpg">
+        <img id="tumbleweed" src="images/tumbleweed.png">
+         <audio id="coyote" src="sounds/coyote.mp3" preload="auto"></audio>
+        <video id="city" autoplay loop="true" src="video/city.mp4"></video>
+        <video id="mountain" autoplay loop="true" src="video/mountain.mp4"></video>
+        <video id="coyote" autoplay loop="true" src="video/coyote.mp4"> </video>
+        <a-asset-item id="niceFeet-obj" src="models/niceFeet.obj"></a-asset-item>
+        <a-asset-item id="niceFeet-mtl" src="models/niceFeet.mtl"></a-asset-item>
+        <a-asset-item id="nonFeet-obj" src="models/nonFeet.obj"></a-asset-item>
+        <a-asset-item id="nonFeet-mtl" src="models/nonFeet.mtl"></a-asset-item>
+        <a-asset-item id="tower-gltf" src="models/model.gltf"></a-asset-item>
+        <a-asset-item id="desert-obj" src="models/nonFeet.obj"></a-asset-item>
+        <a-asset-item id="desert-mtl" src="models/nonFeet.mtl"></a-asset-item>
+        <a-asset-item id="cardon-obj" src="models/cardon.obj"></a-asset-item>
+        <a-asset-item id="cardon-mtl" src="models/cardon.mtl"></a-asset-item>
+        <a-asset-item id="fly-obj" src="models/fly.obj"></a-asset-item>
+        <a-asset-item id="fly-mtl" src="models/fly.mtl"></a-asset-item>
+
+        <!-- <a-timeline id="timeline">
+
+          <a-timeline-animation select="#ioMoon" name ="key1"></a-timeline-animation>
+          <a-timeline-animation select="#ioMoon" name ="key2"></a-timeline-animation>
+          <a-timeline-animation select="#ioMoon" name ="key3"></a-timeline-animation>
+
+        </a-timeline> -->
+
+      </a-assets>
+
+       <!-- <a-video src="#coyote" width="16" height="9" position="0 0 0" rotation "0 90 0"></a-video> -->
+
+      <a-entity id="cameraRig" movement-controls
+      position = "0 0 5">
+
+        <a-entity camera look-controls position="0 2 0">
+            <a-entity light="type: spot; angle: 20; decay: 1.0; penumbra: 1.0"></a-entity>
+        <a-cursor color="red"
+        geometry = "radiusInner: 10; radiusOuter: 10"
+        raycaster="objects: .plane">
+        </a-cursor>
+      </a-entity>
+      </a-entity>
+
+      <a-entity light="type: ambient; color: white; intensity: 0.1"></a-entity>
+
+      <a-entity
+      static-body
+      class="plane"
+      id="mainImg"
+      geometry="primitive: plane"
+      scale="10 10 10;"
+      rotation="0 0 0;"
+      position="0 1 -5;"
+      material="src: #window; side: double"
+      event-set__1="_event: mouseenter; _target: #mainImg; material.src: #windowTwo"
+      event-set__2="_event: mouseleave; _target: #mainImg; material.src: #window"
+      event-set__enter="_event: mouseenter; _target: #windowText; visible: true"
+      event-set__leave="_event: mouseleave; _target: #windowText; visible: false">
+      <a-text id="windowText" value=""
+
+      color="#FFF"
+      visible="false"
+      position="0 -.55 .15"
+
+      ></a-text>
+
+      </a-entity>
+
+      <a-entity
+      static-body
+      class="plane"
+      id="mainImgTwo"
+      geometry="primitive: plane"
+      scale="10 10 10;"
+      rotation="0 90 0;"
+      position="10 1 5;"
+      material="src: #window; side: double"
+      event-set__1="_event: mouseenter; _target: #mainImgTwo; material.src: #openWindowOne"
+      event-set__2="_event: mouseleave; _target: #mainImgTwo; material.src: #window"
+      >
+      </a-entity>
+
+      <a-entity
+      static-body
+      class="plane"
+      id="mainImgThree"
+      geometry="primitive: plane"
+      scale="10 10 10;"
+      rotation="0 180 0;"
+      position="0 1 15;"
+      material="src: #window; side: double"
+      event-set__1="_event: mouseenter; _target: #mainImgThree; material.src: #openWindowTwo"
+      event-set__2="_event: mouseleave; _target: #mainImgThree; material.src: #window"
+      >
+      </a-entity>
+
+      <a-entity
+      static-body
+      class="plane"
+      id="mainImgFour"
+      geometry="primitive: plane"
+      scale="10 10 10;"
+      rotation="0 270 0;"
+      position="-10 1 5;"
+      material="src: #window; side: double"
+      event-set__1="_event: mouseenter; _target: #mainImgFour; material.src: #openWindowThree"
+      event-set__2="_event: mouseleave; _target: #mainImgFour; material.src: #window"
+      >
+      </a-entity>
+
+      <a-entity
+      obj-model="obj: #cardon-obj; mtl: #cardon-mtl"
+      position="1 3 -8"
+      rotation="0 0 0"
+      scale="1 1 1">
+    </a-entity>
+    <a-entity
+    obj-model="obj: #cardon-obj; mtl: #cardon-mtl"
+    position="5 -3 2"
+    rotation="0 90 0"
+    scale="1 1 1">
+  </a-entity>
+
+  <a-entity
+  obj-model="obj: #cardon-obj; mtl: #cardon-mtl"
+  position="8 -3 -6"
+  rotation="0 15 0"
+  scale="1 1 1">
+</a-entity>
+
+<a-entity
+obj-model="obj: #cardon-obj; mtl: #cardon-mtl"
+position="8 -4 -7"
+rotation="0 15 0"
+scale="1 1 1">
+</a-entity>
+
+<a-entity
+obj-model="obj: #cardon-obj; mtl: #cardon-mtl"
+position="-10 -3 -8"
+rotation="0 270 0"
+scale="1 1 1">
+</a-entity>
+
+<a-entity
+obj-model="obj: #cardon-obj; mtl: #cardon-mtl"
+position="-15 -4 -8"
+rotation="0 0 0"
+scale="1.5 1.5 1.5">
+</a-entity>
+
+<a-entity
+obj-model="obj: #cardon-obj; mtl: #cardon-mtl"
+position="-11 -4 5"
+rotation="0 270 0"
+scale="1 1 1">
+</a-entity>
+
+<!-- <a-entity
+obj-model="obj: #cardon-obj; mtl: #cardon-mtl"
+position="15 -20 -8"
+rotation="0 0 0"
+scale="5 10 1">
+</a-entity> -->
+
+<!-- <a-entity obj-model="obj: models/cardon.obj; mtl: models/cardon.mtl" position="15 -20 8" rotation="0 56.778971581874316 0" scale="1 10 1">
+</a-entity> -->
+
+<!-- <a-entity
+obj-model="obj: #cardon-obj; mtl: #cardon-mtl"
+position="-40 -20 -20"
+rotation="0 0 0"
+scale="5 10 1">
+</a-entity> -->
+
+<!-- <a-entity obj-model="obj: models/cardon.obj; mtl: models/cardon.mtl" position="-24.2944 -35.21667 14.18" rotation="" scale="5 10 1">
+</a-entity> -->
+
+<!-- <a-entity obj-model="obj: models/cardon.obj; mtl: models/cardon.mtl" position="1.94657 -23.03727 -25.0942" rotation="0 0.3414828458979706 0" scale="5 10 1">
+</a-entity> -->
+
+<!-- <a-entity obj-model="obj: models/cardon.obj; mtl: models/cardon.mtl" position="4.64664 -33.07451 -50.62456" rotation="" scale="5 10 1">
+</a-entity> -->
+
+<a-entity obj-model="obj: models/cardon.obj; mtl: models/cardon.mtl" position="-9.45306 -5.56257 12.09829" rotation="0 -35.164138760564015 0" scale="1.5 2.32254 1.5">
+</a-entity>
+<a-entity obj-model="obj: models/cardon.obj; mtl: models/cardon.mtl" position="1 3 19.85948" rotation="" scale="">
+    </a-entity>
+
+    <a-entity obj-model="obj: models/cardon.obj; mtl: models/cardon.mtl" position="3.93001 4.94329 18.95776" rotation="0 -173.98894773178682 0" scale="">
+    </a-entity>
+
+<a-entity
+geometry="primitive: sphere"
+radius = "1;"
+position="0 1.5 -4;"
+material="src: #tumbleweed"
+animation="property: rotation;
+     to: 0 360 0;
+     dur: 15000;
+     easing: linear;
+     loop: true;"
+animation ="property: position;
+     to: 0 0 -75;
+     dur: 10000;
+     easing: linear;
+     loop: true;
+     dir: alternate">
+
+
+</a-entity>
+
+ <a-entity geometry="primitive: box" material="src: #coyote"></a-entity>
+
+<!-- <a-entity
+obj-model="obj: #fly-obj; mtl: #fly-mtl"
+position="-5 0 -20"
+rotation="0 0 0"
+scale="10 10 10"
+animation__pos = "property: position;
+to: -1 3 2;
+dur: 10000;
+easing: linear;
+loop:true;
+dir: alternate">
+</a-entity> -->
+
+<!-- <a-entity id="coyote" geometry="primitive: plane" material="color: blue"
+          position="-10 0 0" sound="src: url(sounds/coyote.mp3); autoplay: true"></a-entity> -->
+
+
+
+
+      <!-- <a-entity position="0 0 -3">
+    <a-entity log geometry="primitive: plane" material></a-entity>
+    <a-entity log="channel: foo" geometry="primitive: plane" material></a-entity>
+  </a-entity>
+
+  <script  AFRAME.log('hello to all log entities');
+AFRAME.log('hello to foo', 'foo');>
+</script> -->
+
+      <!-- <a-entity
+      static-body
+      class="plane"
+      geometry="primitive: circle"
+      scale="1000 1000 1000;"
+      position="0 0 500;"
+      material="src: #static"
+      >
+      </a-entity> -->
+
+
+
+<!-- <a-entity environment="preset: tron"></a-entity> -->
+ <!-- <a-videosphere src="#coyote"></a-videosphere> -->
+
+   <a-videosphere src="video/coyote.mp4" autoplay></a-videosphere>
+
+<!-- <a-sky src="#nightSky"></a-sky> -->
+  </a-scene>
+</body>
+</html>
